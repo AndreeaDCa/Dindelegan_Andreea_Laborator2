@@ -4,6 +4,7 @@ using Dindelegan_Andreea_Laborator2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dindelegan_Andreea_Laborator2.Migrations
 {
     [DbContext(typeof(Dindelegan_Andreea_Laborator2Context))]
-    partial class Dindelegan_Andreea_Laborator2ContextModelSnapshot : ModelSnapshot
+    [Migration("20231029124153_Authors1")]
+    partial class Authors1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
