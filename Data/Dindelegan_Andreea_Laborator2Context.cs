@@ -19,6 +19,8 @@ namespace Dindelegan_Andreea_Laborator2.Data
         public DbSet<Dindelegan_Andreea_Laborator2.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Dindelegan_Andreea_Laborator2.Models.Author>? Author { get; set; }
+
+        public DbSet<Dindelegan_Andreea_Laborator2.Models.Category>? Category { get; set; }
        // public DbSet<Dindelegan_Andreea_Laborator2.Models.Author>? Authors { get; set; } = default!;
 
     }
