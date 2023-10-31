@@ -20,6 +20,7 @@ namespace Dindelegan_Andreea_Laborator2.Pages.Categories
         }
 
         public IList<Category> Category { get;set; } = default!;
+        public int CategoryID { get; set; }
 
         public async Task OnGetAsync()
         {

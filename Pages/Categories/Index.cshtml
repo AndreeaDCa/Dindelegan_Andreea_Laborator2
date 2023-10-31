@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model Dindelegan_Andreea_Laborator2.Pages.Categories.IndexModel
 
 @{
@@ -34,3 +34,30 @@
 }
     </tbody>
 </table>
+@if (Model.Category != null)
+{
+    <h3>Books in Selected Category</h3>
+    <table class="table">
+        @foreach (var category in Model.Category)
+        {
+            string selectedRow = "";
+            if (category.ID == Model.CategoryID)
+            {
+                selectedRow = "table-success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @if (category.BookCategories != null)
+                    {
+                        <h4>@category.CategoryName</h4>
+                        @foreach (var bookCategory in category.BookCategories)
+                        {
+                            <p>@bookCategory.Book.Title - @bookCategory.Book.Author.FullName</p>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+}
+
