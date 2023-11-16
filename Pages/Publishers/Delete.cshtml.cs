@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Dindelegan_Andreea_Laborator2.Data;
 using Dindelegan_Andreea_Laborator2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dindelegan_Andreea_Laborator2.Pages.Publishers
 {
+    [Authorize(Roles = "Admin")]
     public class DeleteModel : PageModel
     {
         private readonly Dindelegan_Andreea_Laborator2.Data.Dindelegan_Andreea_Laborator2Context _context;
